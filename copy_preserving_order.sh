@@ -21,7 +21,7 @@ while IFS= read -r line; do
     file=$(echo "$line" | awk '{print substr($0, index($0,$2))}')
     # Copy the file to the target directory
     cp "$file" "$dst"
-    sleep 1
+    sleep 0.05
 done <<< "$files"
 
-echo "Files have been successfully copied to $dst in order preserving creation date order (which will result in sorted)"
+echo "Files have been successfully copied to $dst in order preserving creation date order - this will cause player to playback them correctly"
